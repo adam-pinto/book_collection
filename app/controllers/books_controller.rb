@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def show
   end
 
-  # GET /books/new
+  # GET /books/new  
   def new
     @book = Book.new
   end
@@ -65,6 +65,6 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.require(:book).permit(:title)
+      params.require(:book).permit(:title, :author, :price, :published_date)
     end
 end
